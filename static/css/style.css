@@ -52,11 +52,25 @@ h2 {
 }
 
 @keyframes tilt-n-move-shaking {
-    0% {transform: translate(0, 0) rotate(0deg);}
-    25% {transform: translate(5px, 5px) rotate(5deg);}
-    50% {transform: translate(0, 0) rotate(0deg);}
-    75% {transform: translate(-5px, 5px) rotate(-5deg);}
-    100% {transform: translate(0, 0) rotate(0deg);}
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(5px, 5px) rotate(5deg);
+    }
+
+    50% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    75% {
+        transform: translate(-5px, 5px) rotate(-5deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
 }
 
 
@@ -106,6 +120,25 @@ h2 {
     text-decoration: underline;
     color: var(--secondary-color);
 }
+
+/* Estilo para el Footer */
+#footer{
+    display: flex;
+    align-items: center;
+    background-color: var(--third-color);
+    height: 100px;
+    width: 100%;
+}
+
+/* Estilo para Search */
+#search{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 
 
 /* Estilo para la barra de búsqueda */
@@ -337,4 +370,93 @@ h2 {
 /* Agrega contenido adicional a un elemento */
 .movie-item-detail-subtitle-v2::after {
     content: '🌟';
+}
+
+
+/* Media Queries para dispositivos */
+/* TABLETS */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    h2 {
+        font-size: 3vw;
+    }
+
+    .login-text {
+        display: none;
+    }
+
+    .logo-text {
+        display: none;
+    }
+
+    #banner {
+        height: 400px;
+    }
+
+    #search {
+        height: 200px;
+    }
+
+    .container {
+        max-width: 720px;
+    }
+
+    .card-banner {
+        padding: 0px 75px;
+    }
+
+    #footer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+/* CELULARES */
+@media screen and (max-width: 767px) {
+    h2 {
+        font-size: 3vw;
+    }
+
+    .h2-subtitle {
+        font-size: 5vw;
+    }
+
+    .login-text {
+        display: none;
+    }
+
+    .logo-text {
+        display: none;
+    }
+
+    #banner {
+        height: 300px;
+    }
+
+    #search {
+        height: 200px;
+    }
+
+    .container {
+        max-width: 420px;
+    }
+
+    .card-banner {
+        padding: 0px 50px;
+    }
+
+    .btn-cac {
+        font-size: 1vh;
+    }
+
+    #footer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #footer a {
+        padding: 2px 0px;
+    }
 }
